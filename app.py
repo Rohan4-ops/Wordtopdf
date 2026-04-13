@@ -8,6 +8,10 @@ app = Flask(__name__, static_folder='static')
 # Limit upload size (20MB)
 app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024
 
+@app.route("/")
+def home():
+    return "App is running!"
+
 
 # ==============================
 # Conversion Functions
